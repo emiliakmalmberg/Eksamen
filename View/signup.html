@@ -1,26 +1,42 @@
 <!--Min sign up form-->
 <h1>Sign Up</h1>
 
-<div class="element">
-    <form class="item" action="indsæt reference">
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" value="Name"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" value="Last Name"><br>
-      <form action="/action_page.php">
-        <label for="bdaymonth">Birthday:</label>
-        <input type="month" id="bdaymonth" name="bdaymonth">
-      </form>
-      <label for="gender">Gender</label><br>
-      <input type="text" id="gender" name="gender" value="gender"><br>
-      <button type="button" value="Send Data" onClick="storeData()">Submit</button>
-    </form> 
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="element">
+        <form class="item" action="indsæt reference">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" value="Name"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Last Name"><br>
+          <label for="mail">E-mail:</label><br>
+          <input type="text" id="mail" name="mail" value="mail"><br>
+          <form action="/action_page.php">
+            <label for="bdaymonth">Birthday:</label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+          </form>
+          <label for="gender">Gender</label><br>
+          <input type="text" id="gender" name="gender" value="gender"><br>
+          <button type="button" value="Send Data" onClick="storeData()">Submit</button>
+        </form> 
+        </div>
+<!--Linker til ekstern JS fil, da man skal gøre så man ikke kan logge ind med samme mail-->   
+<script src="/Controller/loginController.js"></script>
+</body>
+</html>
+
 
     <!-- Skal gemme i local storage, derfor:-->
     <script>function storeData() {
         let fname = document.getElementById("fname").value;
         let lname = document.getElementById("lname").value;
+        let fname = document.getElementById("fname").value;
         let bdaymonth = document.getElementById("bdaymonth").value;
         let gender = document.getElementById("gender").value;
         //så jeg kan oprette min key, med efterfølgende value af array
