@@ -23,14 +23,16 @@
         let lname = document.getElementById("lname").value;
         let bdaymonth = document.getElementById("bdaymonth").value;
         let gender = document.getElementById("gender").value;
+        //så jeg kan oprette min key, med efterfølgende value af array
         let user = {
             name: fname,
             lastName: lname,
             Birthday: bdaymonth,
             Gender: gender 
-
         }
-        console.log(user.name,user.lastName,user.Birthday,user.Gender);
+        //min localestorage
         localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender]);
+        //Skal også kunne fjerne ting fra LS:
+        localStorage.clear("find ud af hvad man skal sige her")
     }</script>
 
