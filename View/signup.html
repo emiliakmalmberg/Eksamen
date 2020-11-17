@@ -11,10 +11,14 @@
       </form>
       <label for="Gender">Gender</label><br>
       <input type="text" id="Gender" name="Gender" value="Gender"><br>
-      <input type="submit" value="Sign Up">
+      <button type="button" value="Send Data" onClick="storeData()">Submit</button>
     </form> 
     </div>
 
     <!-- Skal gemme i local storage, derfor:-->
+    <script>function storeData() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value
+        localStorage.setItem(fname, lname);
+    }</script>
 
-    
