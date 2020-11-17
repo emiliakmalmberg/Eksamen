@@ -22,7 +22,15 @@
         let fname = document.getElementById("fname").value;
         let lname = document.getElementById("lname").value;
         let bdaymonth = document.getElementById("bdaymonth").value;
-        let Gender = document.getElementById("gender").value;
-        localStorage.setItem(fname, lname, bdaymonth, Gender);
+        let gender = document.getElementById("gender").value;
+        let user = {
+            name: fname,
+            lastName: lname,
+            Birthday: bdaymonth,
+            Gender: gender 
+
+        }
+        console.log(user.name,user.lastName,user.Birthday,user.Gender);
+        localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender]);
     }</script>
 
