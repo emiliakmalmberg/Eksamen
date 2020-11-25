@@ -26,12 +26,10 @@
           <button type="button" value="Send Data" onClick="storeData()">Submit</button>
         </form> 
         </div>
-        
-<!--Linker til ekstern JS fil, da man skal gøre så man ikke kan logge ind med samme mail-->   
-<script src="/Controller/loginController.js"></script>
 </body>
 </html>
 
+<!--Skal linke til min LoginController, her!-->
 
     <!-- Skal gemme i local storage, derfor:-->
     <script>
@@ -49,8 +47,5 @@
             Gender: gender 
         }
         //min localestorage
-        localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender]);
-        //Skal også kunne fjerne ting fra LS:
-        localStorage.clear("find ud af hvad man skal sige her")
-    }</script>
+        localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender]);}</script>
 
