@@ -1,19 +1,18 @@
-//Her laver jeg min logincontroller: 
-const users = require('./Model/hardUser.js')
-var jwt = require('jsonwebtoken');
+function storeData() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let mail = document.getElementById("mail").value;
+        let bdaymonth = document.getElementById("bdaymonth").value;
+        let gender = document.getElementById("gender").value;
+        //så jeg kan oprette min key, med efterfølgende value af array
+        let user = {
+            name: fname,
+            lastName: lname,
+            Birthday: bdaymonth,
+            Gender: gender 
+        }
+        //min localestorage
+        localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender]);}
 
-
-
-function loginController(req, res) {
-    //Normalt vil man kigge om password og brugernavn stemmer, men det springer vi over
-    var user = users[0]
-    //normalt vil man gemme secret key et andet sted. 
-    //Her laves en token, som dør om en time 
-    const token = jwt.sign({user}, 'my_secret', { expiresIn: '1h' })
-    res.json({
-        token: token
-    })
-}
-
-module.exports = loginController
+        
 
