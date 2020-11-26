@@ -11,10 +11,11 @@ function storeData() {
         name: fname,
         lastName: lname,
         Birthday: bdaymonth,
-        Gender: gender 
+        Gender: gender, 
+        Mail: mail
     }
     //min localestorage
-    localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender]);}
+    localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender, user.Mail]);}
 
 //MIN LOGINCONTROLLER/VALIDATION TIL LOGIN siden
 function check() {

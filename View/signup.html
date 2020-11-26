@@ -24,15 +24,35 @@
           </form>
           <label for="gender">Gender</label><br>
           <input type="text" id="gender" name="gender" value="gender"><br>
-          <button type="button" value="Send Data" onClick="storeData()">Submit</button>
+          <button onClick="storeData()" type="button" value="Send Data" >Submit</button>
         </form> 
-        </div>
 
-        <button type="button" value="Delete Data" onClick="deleteData()">Delete Account</button>
+          <script>
+          function storeData() {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let mail = document.getElementById("mail").value;
+            let bdaymonth = document.getElementById("bdaymonth").value;
+            let gender = document.getElementById("gender").value;
+            
+            //så jeg kan oprette min key, med efterfølgende value af array
+            let user = {
+                name: fname,
+                lastName: lname,
+                Birthday: bdaymonth,
+                Gender: gender, 
+                Mail: mail
+            }
+            //min localestorage
+            localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender, user.Mail]);}
+            
+        </script>
+  </div>
+
 
 </body>
 <!--Skal linke til min LoginController (det der er min validation) her, herunde ligger Local Storage også-->
-
 <script src="../Controller/loginController.js"></script>
+
 </html>
 
