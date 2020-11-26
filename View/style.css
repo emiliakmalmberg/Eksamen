@@ -1,3 +1,16 @@
+/*for account siden*/
+.container {
+  display: flex;
+}
+
+.item {
+  background: lightblue;
+  flex-basis: 600px;
+  height: 50px;
+  margin: 5px;
+}
+
+/*for matches siden*/
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -23,9 +36,10 @@ div.desc {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 38%;
 }
 
+/*Selve min HTML side*/
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,6 +66,6 @@ body {
   }
   
   .topnav a.active {
-    background-color:pink;
+    background-color:lightblue;
     color: white;
   }
