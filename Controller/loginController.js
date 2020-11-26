@@ -6,29 +6,35 @@ function storeData() {
     let bdaymonth = document.getElementById("bdaymonth").value;
     let gender = document.getElementById("gender").value;
     
-    //så jeg kan oprette min key, med efterfølgende value af array
-    let user = {
+    let  User = {
         name: fname,
         lastName: lname,
         Birthday: bdaymonth,
         Gender: gender, 
-        Mail: mail
-    }
-    //min localestorage
-    localStorage.setItem("New User",[user.name, user.lastName, user.Birthday, user.Gender, user.Mail]);}
+        Mail: mail}
 
-//MIN LOGINCONTROLLER/VALIDATION TIL LOGIN siden
+      
+
+var value = JSON.stringify([user.name, user.lastName, user.Birthday, user.Gender, user.Mail]);
+localStorage.setItem("newUser", value);
+var createdUser = JSON.parse(localStorage.getItem("newUser"));
+createdUser.push(new User (user.name, user.lastName, user.Birthday, user.Gender, user.Mail));
+var addUser = JSON.stringify(createdUser);
+localStorage.setItem("newUser", addUser);
+    };
+
+
+//MIN LOGINCONTROLLER/VALIDATION TIL LOGIN SIDEN
 function check() {
-    // stored data fra sign up formen i ls
     var storedName = localStorage.getItem('fname').value;
-    // data fra the login-form
     var userName = document.getElementById('userName');
 
-    // check if stored data from register-form is equal to data from login form
     if(userName.value == storedName) {
         alert('You are logged in');
     }else {
         alert('ERROR');
-    }};
+    }
+
+};
         
 
