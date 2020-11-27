@@ -4,9 +4,20 @@
 }
 
 .item {
-  background: lightblue;
+  background: white;
+  text-align: center;
   flex-basis: 600px;
   height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+
+}
+/*for log ud knappen*/
+.logout{
+  border-radius: 4px;
+  position: center;
+  right:10px;
+  top:10px;
   margin: 5px;
 }
 
