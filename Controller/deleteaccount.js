@@ -1,4 +1,3 @@
-
 function clear(){
-    localStorage.removeItem("newUser_"+fname);
+    localStorage.removeItem("newUser");
 }
