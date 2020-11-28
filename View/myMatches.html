@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h>My Matches</h>
+    <h style="font-size:50px; color:pink;">My Matches</h>
+
+    <!--Dwight-->
+    <div style="margin: 5px;border: 1px solid #ccc;float: left;width: 180px; width: 100%;
+    height: auto;" id="match2" class="desc">
+    </div>
+    <script>document.getElementById("match2").innerHTML = localStorage.getItem("page_content");</script>
+
+    <!--Creed-->
+    <div style="margin: 5px;border: 1px solid #ccc;float: left;width: 180px; width: 100%;
+    height: auto;" id="match4" class="desc">
+    </div>
+    <script>document.getElementById("match4").innerHTML = localStorage.getItem("creed_content");</script>
+
 </body>
 </html>

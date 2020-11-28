@@ -9,25 +9,28 @@
 <body>
     <h1>Matches</h1>
     <p>Click on the person, to see full picture</p>
-    
-<div class="gallery">
+
+    <!--Dwight Match, alt forklaret her, efterfølgende potenitelle matches følger samme kodestruktur-->
+<div id="match1" class="gallery">
     <a target="_blank" href="../Images/dwight.jpg">
       <img src="../Images/dwight.jpg"  width="600" height="400">
     </a>
-    <div class="desc">Dwight Schrute is trained in the art of surveillance and is a former Lackawanna County volunteer sheriff's deputy. He has a purple belt in Goju-Ryu karate and is the senpai at his dojo</div>
-    <button type="button">Like</button>
-    <button type="button">Dislike</button>
+    <div id="match1" class="desc">Dwight Schrute is trained in the art of surveillance and is a former Lackawanna County volunteer sheriff's deputy. He has a purple belt in Goju-Ryu karate and is the senpai at his dojo</div>
+    <a href="#" onclick="set()" class="btn">Like</a>
+    <a href="#" onclick="delte()" class="btn">Dislike</a>
   </div>
   
-  <div class="gallery">
+  <!--Creed Bratton match-->
+  <div id="match3" class="gallery">
     <a target="_blank" href="../Images/creed.jpg">
       <img src="../Images/creed.jpg" width="600" height="400">
     </a>
-    <div class="desc">Creed Bratton is a deviant, former hippie and homeless man employed at the Scranton branch of paper distributor Dunder Mifflin as a quality assurance director.</div>
-    <button type="button">Like</button>
-    <button type="button">Dislike</button>
+    <div id="match3" class="desc">Creed Bratton is a deviant, former hippie and homeless man employed at the Scranton branch of paper distributor Dunder Mifflin as a quality assurance director.</div>
+    <a href="#" onclick="settwo()" class="btn">Like</a>
+    <a href="#" onclick="deltetwo()" class="btn">Dislike</a>
   </div>
   
+  <!--Ryan Match-->
   <div class="gallery">
     <a target="_blank" href="../Images/ryan.jpg">
       <img src="../Images/ryan.jpg" width="600" height="400">
@@ -65,6 +68,6 @@
   </div>
 
 <!--Linker til min like funktion her, -->
-    <script src="../Controller/likematches.js"></script>
+    <script src="../Controller/likeMatches.js"></script>
 </body>
 </html>

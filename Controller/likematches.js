@@ -1,14 +1,20 @@
-//Her er min like funktion, til mine the office matches, det gør så det bliver gemt i LS
-//henter først min harduser da den skal bruges:
+//Jeg går ind og bruger min Local Storage, forklaret i detaljer fra første eksempel med Dwight.
+//Nuværende er der en funktionalitet der ikke fungerer optimalt her. Dette er evnen til at dislike fra mymatches siden, kan man kun fra matches siden..
+//Dwight
+    //Starter med at oprette min funktion, der bliver kaldt inde i matches.HTML
+function set(){
+    //Opretter en variabel da jeg skal hente brugeres information, så det senere kan gemmes i LS, gøres på linje 7.
+var page_content = document.getElementById("match1").innerHTML;
+localStorage.setItem("page_content", page_content );} 
+    //Præcis det samme gøres her, hvor at man bare skal kunne slette brugeren igen fra MyMatches siden
+function delte(){
+var page_content = document.getElementById("match1").innerHTML;
+localStorage.removeItem("page_content", page_content);}
 
-//henter min harduser ned
-var User = require("../Model/hardUser.js")
-
-//Definere mine matches ved hjælp af classen
-let match1 = new User("Dwight","Schrute","30","Male");
-let match2 = new User("Creed","Bratton","30","Male");
-let match3 = new User("Stanley","S","50","Male");
-let match4 = new User("Meredith","M","30","Female");
-let match5 = new User("Andy","A","40","Male");
-let match6 = new User("Pam","P","40","Female");
-
+//Creed  kode gentaget, men har omskrevet variablen, så den ikke henter Dwights informationer, men creeds
+function settwo(){
+var creed_content = document.getElementById("match3").innerHTML;
+localStorage.setItem("creed_content", creed_content );} 
+function deltetwo(){
+var creed_content = document.getElementById("match3").innerHTML;
+localStorage.removeItem("creed_content", creed_content);}
