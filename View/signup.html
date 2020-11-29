@@ -10,7 +10,8 @@
     <h1>Sign Up</h1>
     <p>Please fill out this form</p>
     <div class="element">
-        <form class="item" action="indsæt reference">
+      <!--VI KALDER ACTION SIGNUP OG METHOD POST SÅ VI POSTER TIL ROUTE MED NAVNET REGISTER, GØRES I SERVERFIL-->
+        <form class="item" action="/signup" method="POST">
           <label for="fname">First name:</label><br>
           <input type="text" id="fname" name="fname" value="Name"><br>
           <label for="lname">Last name:</label><br>
@@ -30,6 +31,9 @@
           <button type="button" onclick="clear()">Delete Account</a></button>
         </form> 
     </div>
+
+    <a href="login.html" class="btn">Login</a>
+
 <script src="../Controller/loginController.js"></script>
 <script src="../Controller/deleteaccount.js"></script>
 </body>

@@ -27,17 +27,7 @@ localStorage.setItem("newUser_"+fname, JSON.stringify(user));
     };
 
 
-//MIN LOGINCONTROLLER/VALIDATION TIL LOGIN SIDEN
-function check() {
-    var storedmail = localStorage.getItem('mail').value;
-    var userName = document.getElementById('userName');
+//MIN LOGINCONTROLLER/VALIDATION TIL LOGIN SIDEN er i serveren
 
-    if(userName.value == storedmail.value) {
-        alert('You are logged in');
-    }else {
-        alert('ERROR');
-    }
-
-};
         
 
