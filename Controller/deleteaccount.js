@@ -1,3 +1,2 @@
-function clear(){
-    localStorage.removeItem("newUser");
-}
+function remove(){
+    localStorage.removeItem("newUser");}
