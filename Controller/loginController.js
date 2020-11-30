@@ -16,7 +16,12 @@ function storeData() {
         Gender: gender, 
         Mail: mail}
 
-      
+//den skal hente fra min sign up, derfor /signup
+fetch("http://localhost:8000/signup", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify (user)
+})      
 
 var value = JSON.stringify([user.name, user.lastName, user.Password, user.Birthday, user.Gender, user.Mail]);
 localStorage.setItem("newUser", value);

@@ -37,8 +37,8 @@ localStorage.removeItem("meredith_content", meredith_content);}
 
 //Andy
 function setfem(){
-    var andy_content = document.getElementById("match6").innerHTML;
-    localStorage.setItem("andy_content", andy_content );} 
-    function deltefem(){
-    var andy_content = document.getElementById("match6").innerHTML;
-    localStorage.removeItem("andy_content", andy_content );}
+var andy_content = document.getElementById("match6").innerHTML;
+localStorage.setItem("andy_content", andy_content );} 
+function deltefem(){
+var andy_content = document.getElementById("match6").innerHTML;
+localStorage.removeItem("andy_content", andy_content );}
