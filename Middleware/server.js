@@ -1,5 +1,6 @@
 //Henter min application server express:
 const express = require ("express");
+const fs = require("fs")
 
 const app = express ();
 const PORT = 8000;
@@ -10,6 +11,7 @@ const bodyparser = require("body-parser")
 app.use(bodyparser.json())
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
