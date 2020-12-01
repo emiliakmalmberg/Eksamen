@@ -1,15 +1,26 @@
 
-        /*
-//den skal hente fra min sign up, derfor /signup
-fetch("http://localhost:8000/signup", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify (user)
-})     */ 
+const express = require("express");
+const User = require("../Model/hardUser");
+const fs = require("fs");
+const router = express.Router();
+const dataPath = "../database";
 
 
+//validation
+router.post('/', (req, res) => { 
 
-//MIN LOGINCONTROLLER/VALIDATION TIL LOGIN SIDEN er i serveren
+const newUser = new User (
+req.body.fname,
+req.body.lname,
+req.body.age,
+req.body.gender,
+)
 
-        
+fs.writeFileSync(dataPath + "/"+req.body.fname +".json", JSON.stringify(newUser)), err => {
+  if (err) throw error;
+}
 
+})
+
+
+module.exports = router;

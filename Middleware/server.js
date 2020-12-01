@@ -1,16 +1,21 @@
 //Henter min application server express:
 const express = require ("express");
-const fs = require("fs")
+const bodyparser = require("body-parser")
+const fs = require("fs");
+const cors = require('cors');
+const loginController = require("../Controller/loginController")
+
 
 const app = express ();
 const PORT = 8000;
-const CORS = require("cors")
-app.use(CORS())
 
-const bodyparser = require("body-parser")
+app.use(cors())
 app.use(bodyparser.json())
 
+// Crud Endpoint
+app.use("/User", loginController);
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 

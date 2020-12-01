@@ -1,4 +1,3 @@
-//let User = require("./Model/hardUser.js")
 //LOCAL STORAGE
 function storeData() {
     let fname = document.getElementById("fname").value;
