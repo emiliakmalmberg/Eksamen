@@ -3,13 +3,12 @@ const fs = require("fs");
 const router = express.Router();
 const dataPath = "../database";
 
-
 var firstname = document.getElementById("fname")
 var lastname = document.getElementById("lname")
 var gender = document.getElementById("gender")
 var age = document.getElementById("age")
 
-
+//MIN SIGN UP, SÅ NÅR MAN CREATER USER, SKAL DET GEMMES I JSON FILEN UNDER DATABASE, SÅ MAN KAN TRÆKKE DATA DERFRA
 function createuser(){
   var user = {
     firstname: firstname.value,
