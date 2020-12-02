@@ -1,12 +1,9 @@
-
 const express = require("express");
 const User = require("../Model/hardUser");
 const fs = require("fs");
 const router = express.Router();
 const dataPath = "../database";
 
-
-//validation
 router.post('/', (req, res) => { 
 
 const newUser = new User (

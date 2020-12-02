@@ -1,3 +1,4 @@
+ <!--LOGIN SIDEN-->
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -7,22 +8,26 @@
  </head>
  <body>
 <h1>Log In</h1>
-
+  <!--MIN FORM MED USERNAME(SKAL ENTEN VÆRE MAIL ELLER FIRSTNAME, AFHÆNGER AF LOGIN VALIDATION)-->
   <div class="element">
       <form class="item">
         <label for="userName">User Name:</label><br>
         <input type="text" id="userName" name="userName" value="Your Mail"><br>
         <label for="Password">Password:</label><br>
         <input type="Password" id="Password" name="Password" value="Password"><br><br>
-        <button type="button" onclick="getInfo()"></a> Log In</button>
+        <!--LINKER HER TIL MIN LOGIN VALIDATION, DA DEN SKAL BRUGE FUNKTIONEN GETINFO, LIGGER UNDER "create.js"-->
+        <button type="button" onclick="login()"></a> Log In</button>
       </form> 
       </div>
       
-  <br>
-  <a href="signup.html" class="btn">Sign up here!</a>
-  <br>
-  <a href="html.html" class="btn">Or back go to frontpage</a>
-  <script src="../Controller/loginController.js"></script>
+      <!--LINKS TIL DE ANDRE SIDER, SÅ JEG NEMT KAN NAVIGERE RUNDT-->
+      <br>
+      <a href="signup.html" class="btn">Sign up here!</a>
+      <br>
+      <a href="html.html" class="btn">Or back go to frontpage</a>
+
+
+  <script src="../Controller/create.js"></script>
   <script src="../Middleware/server.js"></script>
 
  </body>

@@ -4,17 +4,17 @@ var lastname = document.getElementById("lname")
 var gender = document.getElementById("gender")
 var age = document.getElementById("age")
 
-function createuser(){
 
-var user = {
+function createuser(){
+  var user = {
     firstname: firstname.value,
     lastname: lastname.value,
     gender: gender.value,
     age: age.value
-}
-console.log(user)
+  }
+  console.log(user)
 
-fetch("http://localhost:8000/User/", {
+  fetch("http://localhost:8000/User/", {
     method: "POST",
     headers: {
         "Content-type": "application/json"
@@ -22,20 +22,23 @@ fetch("http://localhost:8000/User/", {
     body: JSON.stringify(
         user
     )
-}).catch(err => {
+  }).catch(err => {
     console.log(err)
-})
+  })
 
-}
+//validation
+
+};
 
 
-/*// Laver en login funktion
+// MIN LOGINFUNKTION, DER VALIDERER PÅ LOGINSIDEN
+function login(){
 
     // laver variabler, til password og email
     var firstname = document.getElementById('fname')
     var lastname = document.getElementById('lname')
     
-    // Vi opretter variabel, som tager værdien af password & Email variablen
+    // Vi opretter variabel, som tager værdien af firstname & lastname variablen
     let userLogin = {
     firstname: fname.value, 
     lastname: lname.value,
@@ -58,6 +61,8 @@ fetch("http://localhost:8000/User/", {
         .catch((error) => {
           console.error('Ku ikke logge ind:', error);
         });
-        }
+      }
+        
 
-*/
+        
+
