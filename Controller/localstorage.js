@@ -24,4 +24,6 @@ var addUser = JSON.stringify(createdUser);
 localStorage.setItem("newUser_"+fname, JSON.stringify(user));
     };
 
+//OPDATERING AF LOCALSTORAGE
+
 

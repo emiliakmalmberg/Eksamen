@@ -1,22 +1,21 @@
-const User = require("../Model/hardUser");
+const express = require ("express");
+var app = express()
+//const User = require("../Model/hardUser");
 const fs = require("fs");
-const router = express.Router();
+//const router = express.Router();
 const dataPath = "../database";
 
-var firstname = document.getElementById("fname")
-var lastname = document.getElementById("lname")
-var gender = document.getElementById("gender")
-var age = document.getElementById("age")
+
 
 //MIN SIGN UP, SÅ NÅR MAN CREATER USER, SKAL DET GEMMES I JSON FILEN UNDER DATABASE, SÅ MAN KAN TRÆKKE DATA DERFRA
 function createuser(){
+  var firstname = document.getElementById("fname")
+  var lastname = document.getElementById("lname")
+
   var user = {
-    firstname: firstname.value,
-    lastname: lastname.value,
-    gender: gender.value,
-    age: age.value
+    firstname: fname.value,
+    lastname: lname.value,
   }
-  console.log(user)
 
   fetch("http://localhost:8000/User/", {
     method: "POST",
@@ -30,13 +29,10 @@ function createuser(){
     console.log(err)
   })
 
-  router.post('/', (req, res) => { 
-
+  app.post('/', (req, res) => { 
     const newUser = new User (
     req.body.fname,
     req.body.lname,
-    req.body.age,
-    req.body.gender,
     )
     
     fs.writeFileSync(dataPath + "/"+req.body.fname +".json", JSON.stringify(newUser)), err => {
