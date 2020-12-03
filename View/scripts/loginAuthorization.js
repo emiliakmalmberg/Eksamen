@@ -15,7 +15,7 @@ function login(){
           method: 'POST', // or 'PUT'
           headers: {
             'Content-Type': 'application/json',
-          },
+          }, 
           body: JSON.stringify(userLogin),
         })
         .then(response => response.json())

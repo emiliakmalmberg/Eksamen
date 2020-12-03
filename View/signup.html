@@ -12,7 +12,7 @@
     <div class="element" method="POST">
       <!--VI KALDER ACTION SIGNUP OG METHOD POST SÅ VI POSTER TIL ROUTE MED NAVNET REGISTER, GØRES I SERVERFIL-->
         <form class="item" method="POST">
-          <label for="fname" id="fname">First name:</label><br>
+          <label for="fname2" id="fname2">First name:</label><br>
           <input type="text" id="fname" name="fname" value="fname"><br>
           <label for="lname">Last name:</label><br>
           <input type="text" id="lname" name="lname" value="lname"><br>
@@ -29,9 +29,8 @@
           <button type="button" onclick="createuser()">Submit</button>
           <!--Krav 2, hvis en bruger har sign up, men fortryder at store data, er nedenstående knap til at clear data fra LS-->
           <button type="button" onclick="remove()">Delete Account</a></button>
+          <script src="scripts/signup.js"></script>
         </form> 
-        <script src="../Controller/signupAuthorization.js"></script>
-        <script src="../server.js"></script>
     </div>
 
     <a href="login.html" class="btn">Login</a>
