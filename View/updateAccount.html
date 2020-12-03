@@ -11,19 +11,12 @@
     <div class="element">
         <form class="item" action="indsæt reference">
           <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value="Name"><br>
+          <input type="text" id="fname" name="fname" value="First Name"><br>
           <label for="lname">Last name:</label><br>
           <input type="text" id="lname" name="lname" value="Last Name"><br>
-          <label for="gender">Gender</label><br>
-          <input type="text" id="gender" name="gender" value="gender"><br>
-          <button type="button" value="Send Data" >Update</button>
+          <button type="button" onclick="update()" >Update</button>
+          <script src="./scripts/update.js"></script>
         </form> 
         </div>
-
-
-<!--Skal linke til en javascript der gør det muligt at slette data samt opdatere-->
-<script src="../Controller/updateAccount.js"></script>
-<script src="../Controller/localstorage.js"></script>
-
 </body>
 </html>
