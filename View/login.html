@@ -11,12 +11,13 @@
   <!--MIN FORM MED USERNAME(SKAL ENTEN VÆRE MAIL ELLER FIRSTNAME, AFHÆNGER AF LOGIN VALIDATION)-->
   <div class="element">
       <form class="item">
-        <label for="userName">User Name:</label><br>
-        <input type="text" id="userName" name="userName" value="Your Mail"><br>
-        <label for="Password">Password:</label><br>
-        <input type="Password" id="Password" name="Password" value="Password"><br><br>
+        <label for="fname">User Name:</label><br>
+        <input type="text" id="fname" name="fname" value="Your Firstname"><br>
+        <label for="lname">Password:</label><br>
+        <input type="lname" id="lname" name="lname" value="Your Lastname"><br><br>
         <!--LINKER HER TIL MIN LOGIN VALIDATION, DA DEN SKAL BRUGE FUNKTIONEN GETINFO, LIGGER UNDER "create.js"-->
         <button type="button" onclick="login()"></a> Log In</button>
+        <script src="scripts/login.js"></script>
       </form> 
       </div>
       
@@ -25,10 +26,6 @@
       <a href="signup.html" class="btn">Sign up here!</a>
       <br>
       <a href="html.html" class="btn">Or back go to frontpage</a>
-
-
-  <script src="../Controller/loginAuthorization.js"></script>
-  <script src="../server.js"></script>
 
  </body>
  </html>
