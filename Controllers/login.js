@@ -9,7 +9,7 @@ module.exports = function (app) {
             req.body.lastName,
         )
 
-        // Read database
+        // Læser database
         var users
         try {
             const data = fs.readFileSync('./users.json', 'utf8')
@@ -18,7 +18,7 @@ module.exports = function (app) {
             users = []
         }
 
-        // Check if user already exists in database
+        // Tjekker om brugeren allerede eksistere i database
         var exists = false
         users.forEach(item => {
             if ((item.firstName == user.firstName) && (item.lastName == user.lastName)) {
