@@ -1,4 +1,4 @@
-//LOCAL STORAGE
+//LOCAL STORAGE/BRUGES IKKE I SLUT RESULTAT MEN SKAL BRUGES I RAPPORTEN TIL DISKUSSION
 function storeData() {
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;

@@ -1,6 +1,5 @@
 //Jeg går ind og bruger min Local Storage, forklaret i detaljer fra første eksempel med Dwight.
-//Nuværende er der en funktionalitet der ikke fungerer optimalt her. Dette er evnen til at dislike fra mymatches siden, kan man kun fra matches siden..
-
+//Nuværende er der en funktionalitet der ikke fungerer optimalt her: Dette er evnen til at dislike fra mymatches siden, kan man kun fra matches siden..
 
 //Dwight
 //Starter med at oprette min funktion, der bliver kaldt inde i matches.HTML
@@ -14,7 +13,7 @@ var page_content = document.getElementById("match1").innerHTML;
 localStorage.removeItem("page_content", page_content);}
 
 
-//Creed  kode gentaget, men har omskrevet variablen, samt key og value i LS, så den ikke henter og bruger alle Dwights informationer:
+//Creed kode gentaget, men har omskrevet variablen, samt key og value i LS, så den ikke henter og bruger alle Dwights informationer:
 function settwo(){
 var creed_content = document.getElementById("match3").innerHTML;
 localStorage.setItem("creed_content", creed_content );} 
