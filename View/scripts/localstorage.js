@@ -1,4 +1,4 @@
-//LOCAL STORAGE/BRUGES IKKE I SLUT RESULTAT MEN SKAL BRUGES I RAPPORTEN TIL DISKUSSION
+//LOCAL STORAGE/BRUGES IKKE I SLUT RESULTAT MEN SKAL BRUGES I RAPPORTEN TIL DISKUSSION, SOM MULIG LØSNING
 function storeData() {
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
@@ -15,15 +15,17 @@ function storeData() {
         Gender: gender, 
         Mail: mail}
 
-
-var value = JSON.stringify([user.name, user.lastName, user.Password, user.Birthday, user.Gender, user.Mail]);
+//Mulig løsning til at lave en ny unik key i localStorage for hver gang en bruger opdaterer
+var value = JSON.stringify([user.name, user.lastName]);
+    //Her gemmes vores key "newUser" i localStorage
 localStorage.setItem("newUser", value);
 var createdUser = JSON.parse(localStorage.getItem("newUser"));
-//createdUser.push(new User (user.name, user.lastName, user.Birthday, user.Gender, user.Mail));
 var addUser = JSON.stringify(createdUser);
+    //Det er her løsningen tiltænkes at lægge når der er oprettes en ny user med unikt fname
+    //(...)er unikt idet man tillader fra start ikke at have det samme fornavn
 localStorage.setItem("newUser_"+fname, JSON.stringify(user));
-    };
+};
 
-//OPDATERING AF LOCALSTORAGE
+
 
 

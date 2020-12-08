@@ -10,13 +10,12 @@ function createuser(){
         "Content-type": "application/json"
     },
     body: JSON.stringify(user)
-    
   }).catch(err => {
     console.log(err)
   })
 }
 
-function remove(){
+function removeuser(){
   var user = {
     firstName:  document.getElementById("fname").value,
     lastName:  document.getElementById("lname").value,

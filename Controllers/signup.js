@@ -1,30 +1,32 @@
+//Importere file system
 const fs = require('fs');
-
 const User = require('../Model/User');
 
+//her den sættes op med serveren
 module.exports = function (app) {
     app.post('/signup', (req, res) => {
         let user = new User(
             req.body.firstName,
             req.body.lastName,
         )
-        // Check that both are defined
+        //Check at begge værdier er defined, hvis ikke returnerer 400
         if (!(user.firstName && user.lastName)) {
             res.sendStatus(400)
             return
         }
-
-        // Read database
+        //Læser database, med readFile funktionen
         var users
         try {
             const data = fs.readFileSync('./users.json', 'utf8')
+            //Når jeg vil gemme til filen, skal det konverteres derfor:
             users = JSON.parse(data)
         } catch (err) {
             users = []
         }
 
-        // Check if user already exists in database
+        //Check om user allerede eksisterer i database
         var exists = false
+            //Laver et for each loop, hvilket er en callback funktion:
         users.forEach(item => {
             if ((item.firstName == user.firstName) && (item.lastName == user.lastName)) {
                 exists = true
@@ -32,10 +34,11 @@ module.exports = function (app) {
         });
 
         if (!exists) {
-            // Add user to database
+            // Tilføj user til database, hvis false ikke er opfyldt, altså hvis brugeren ikke allerede findes i databasen, 
+            //så bruger vi push, og tilføjer til enden af mit array i JSON-filen users.json
             users.push(user);
 
-            // Store database again
+            // Store database igen med writeFile, funktionen
             try {
                 fs.writeFileSync("./users.json", JSON.stringify(users))
             } catch (err) {
@@ -48,13 +51,14 @@ module.exports = function (app) {
         res.sendStatus(200)
     });
 
+    //Delete funktionen, kopiret struktur fra ovenstående
     app.delete('/signup', (req, res) => {
         let user = new User(
             req.body.firstName,
             req.body.lastName,
         )
 
-        // Read database
+        // Læs database
         var users
         try {
             const data = fs.readFileSync('./users.json', 'utf8')
@@ -73,7 +77,7 @@ module.exports = function (app) {
             }
         });
 
-        // Store database again
+        // Store database igen
         try {
             fs.writeFileSync("./users.json", JSON.stringify(keptUsers))
         } catch (err) {
